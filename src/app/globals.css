@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -37,10 +38,22 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  
+  /* Variables específicas para el login */
+  --color-login-card-bg: var(--login-card-bg);
+  --color-login-card-border: var(--login-card-border);
+  --color-login-gradient-from: var(--login-gradient-from);
+  --color-login-gradient-to: var(--login-gradient-to);
+  --color-login-icon-bg: var(--login-icon-bg);
+  --color-login-text-muted: var(--login-text-muted);
+  --color-login-toggle-bg: var(--login-toggle-bg);
+  --color-login-toggle-text: var(--login-toggle-text);
+  
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
 }
 
 :root {
@@ -76,6 +89,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+
+  --login-card-bg: oklch(1 0 0 / 0.8); /* Fondo con transparencia */
+  --login-card-border: oklch(0.922 0 0);
+  --login-gradient-from: oklch(0.5 0.2 250); /* Azul */
+  --login-gradient-to: oklch(0.6 0.2 300); /* Púrpura */
+  --login-icon-bg: linear-gradient(to right, oklch(0.5 0.2 250), oklch(0.6 0.2 300));
+  --login-text-muted: oklch(0.556 0 0);
+  --login-toggle-bg: oklch(0.922 0 0);
+  --login-toggle-text: oklch(0.205 0 0);
 }
 
 .dark {
@@ -110,6 +133,16 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  
+  --login-card-bg: oklch(0.205 0 0 / 0.8); 
+  --login-card-border: oklch(1 0 0 / 15%);
+  --login-gradient-from: oklch(0.7 0.2 250); /* Azul más claro para dark */
+  --login-gradient-to: oklch(0.8 0.2 300); /* Púrpura más claro para dark */
+  --login-icon-bg: linear-gradient(to right, oklch(0.7 0.2 250), oklch(0.8 0.2 300));
+  --login-text-muted: oklch(0.708 0 0);
+  --login-toggle-bg: oklch(0.269 0 0);
+  --login-toggle-text: oklch(0.985 0 0);
 }
 
 @layer base {
