@@ -5,4 +5,5 @@ export type Post = {
     author: string;
     image: string;
     date: Date;
+    authorImage:string;
 }

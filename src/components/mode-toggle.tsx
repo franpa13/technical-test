@@ -19,14 +19,14 @@ export function ModeToggle() {
         className="absolute top-4 cursor-pointer right-4 p-2 rounded-full bg-login-toggle-bg text-login-toggle-text transition-colors z-20"
         aria-label="Toggle theme"
       >
-        <div className="w-5 h-5" /> {/* Espacio reservado */}
+        <div className="w-5 h-5" /> 
       </button>
     )
   }
 
   return (
     <button
-      className="absolute top-4 cursor-pointer right-4 p-2 rounded-full bg-login-toggle-bg text-login-toggle-text transition-colors z-20 hover:scale-110 transition-transform"
+      className="absolute top-6 cursor-pointer right-4 p-2 rounded-full bg-login-toggle-bg text-login-toggle-text  z-20 hover:scale-110 transition-transform"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
     >

@@ -5,14 +5,13 @@ import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { loginUser } from "@/services/login-user";
 import { User } from "@/types/auth-types";
 import SnackbarAlert from "@/components/snackbar-alert";
-import { Eye, EyeOff, Mail, Lock, Rocket } from "lucide-react";
-import { ModeToggle } from "@/components/mode-toggle";
+import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { ButtonLoader } from '../../../components/button-loader';
 import { Title } from "@/components/title";
+import { RocketLogo } from '../../../components/ui/rocket-logo';
 
 export default function LoginPage() {
     const router = useRouter();
@@ -20,7 +19,7 @@ export default function LoginPage() {
     const [errorLogin, setErrorLogin] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
+
 
     const [form, setForm] = useState<User>({
         email: "",
@@ -56,28 +55,17 @@ export default function LoginPage() {
 
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-0 relative overflow-hidden bg-background">
-            <ModeToggle />
+        <div className="min-h-screen  flex items-center justify-center p-5 p-0 relative overflow-hidden bg-background">
+
 
             <Card
                 className="w-full max-w-md shadow-2xl border-login-card-border backdrop-blur-sm relative z-10 transform transition-all duration-500 hover:shadow-2xl "
-                
+
             >
                 <CardHeader className="text-center pb-4 relative">
-                    <div className="relative inline-block mb-2">
-                        <div
-                            className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-0 transform transition-transform duration-300 hover:scale-110"
-                            style={{
-                                background: 'var(--login-icon-bg)'
-                            }}
-                        >
-                            <Rocket className="h-8 w-8 text-white" />
-                        </div>
-                    </div>
+                    <RocketLogo />
 
-                    <CardTitle
-
-                    >
+                    <CardTitle>
                         <Title title="Bienvenido de vuelta"></Title>
                     </CardTitle>
                     <CardDescription className=" text-base text-login-text-muted">
@@ -93,6 +81,7 @@ export default function LoginPage() {
                                 <Mail className="h-4 w-4" />
                                 Correo electrónico
                             </Label>
+
                             <div className="relative">
                                 <Input
                                     id="email"
@@ -141,7 +130,7 @@ export default function LoginPage() {
                     <CardFooter className="flex flex-col gap-4 mb-2">
                         {errorLogin && (
                             <SnackbarAlert
-                                description="Por favor, verificá tu email y contraseña"
+                                description=""
                                 variant="destructive"
                                 title="Credenciales incorrectas"
                             />
@@ -165,9 +154,7 @@ export default function LoginPage() {
                     </CardFooter>
                 </form>
             </Card>
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-login-text-muted text-sm">
-                <p>Creado con pasión 💙 y mucho mate 🧉</p>
-            </div>
+
         </div>
     );
 }
