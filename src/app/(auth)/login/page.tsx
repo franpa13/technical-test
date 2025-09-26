@@ -56,7 +56,7 @@ export default function LoginPage() {
 
 
     return (
-        <div className="min-h-screen  flex items-center justify-center p-5 p-0 relative overflow-hidden bg-background">
+        <div className="min-h-screen  animate-fade-in-down flex items-center justify-center p-5 p-0 relative overflow-hidden bg-background">
 
 
             <Card

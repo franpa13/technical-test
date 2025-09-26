@@ -1,7 +1,9 @@
 
 @import "tailwindcss";
 @import "tw-animate-css";
+@import 'tailwindcss';
 
+@plugin "@midudev/tailwind-animations";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -39,7 +41,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   
-  /* Variables específicas para el login */
+
   --color-login-card-bg: var(--login-card-bg);
   --color-login-card-border: var(--login-card-border);
   --color-login-gradient-from: var(--login-gradient-from);

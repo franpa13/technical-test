@@ -39,7 +39,7 @@ export default function Page() {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br ">
+        <div className="min-h-screen animate-fade-in-down bg-gradient-to-br ">
             <div className=" mx-auto">
                 <div className="text-center mb-6">
                     <div className="flex justify-center items-center lg:px-6 mt-6 lg:mt-0 gap-2">
