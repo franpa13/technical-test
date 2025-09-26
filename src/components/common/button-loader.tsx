@@ -15,7 +15,7 @@ interface ButtonLoaderProps {
     onClick?: () => void;
 }
 
-export function ButtonLoader({
+export const ButtonLoader = ({
     isLoading = false,
     children,
     loadingText = "",
@@ -25,7 +25,7 @@ export function ButtonLoader({
     type = "button",
     disabled = false,
     onClick,
-}: ButtonLoaderProps) {
+}: ButtonLoaderProps) => {
     return (
         <Button
             type={type}

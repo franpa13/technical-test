@@ -7,3 +7,4 @@ export type Post = {
     date: Date;
     authorImage:string;
 }
+

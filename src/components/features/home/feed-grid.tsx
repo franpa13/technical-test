@@ -5,13 +5,21 @@ interface FeedListProps {
   posts: Post[];
 }
 
-export function FeedGrid({ posts }: FeedListProps) {
+export const FeedGrid = ({ posts }: FeedListProps) =>{
   if (posts.length === 0) {
     return <p className="text-muted-foreground">No hay publicaciones todavía.</p>;
   }
 
   return (
-    <div className="space-y-6 flex my-12 justify-between gap-4 flex-wrap ">
+    <div
+      className="
+        grid gap-6 my-12
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        2xl:grid-cols-4
+      "
+    >
       {posts.map((post) => (
         <FeedItem key={post.id} post={post} />
       ))}

@@ -12,7 +12,7 @@ export const useLocation = () => {
             return pathname === "/";
         }
 
-        // Para todo lo demás, revisa que empiece con href
+        //  revisa que empiece con href
         return pathname.startsWith(href);
     };
 

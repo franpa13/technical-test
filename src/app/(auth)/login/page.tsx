@@ -7,11 +7,12 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { loginUser } from "@/services/login-user";
 import { User } from "@/types/auth-types";
-import SnackbarAlert from "@/components/snackbar-alert";
+
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
-import { ButtonLoader } from '../../../components/button-loader';
-import { Title } from "@/components/ui/title";
-import { RocketLogo } from '../../../components/ui/rocket-logo';
+import { ButtonLoader } from '../../../components/common/button-loader';
+import { Title } from "@/components/common/title";
+import { RocketLogo } from '../../../components/common/rocket-logo';
+import { SnackbarAlert } from "@/components/common/snackbar-alert";
 
 export default function LoginPage() {
     const router = useRouter();

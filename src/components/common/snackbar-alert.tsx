@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { Info } from "lucide-react";
 
 interface SnackbarAlertProps {
@@ -9,12 +9,12 @@ interface SnackbarAlertProps {
     icon?: ReactNode;
 }
 
-export default function SnackbarAlert({
+export const SnackbarAlert = ({
     title,
     description,
     variant = "default",
     icon = <Info />,
-}: SnackbarAlertProps) {
+}: SnackbarAlertProps) => {
     return (
         <Alert variant={variant} className="flex justify-start items-start ">
             {icon}

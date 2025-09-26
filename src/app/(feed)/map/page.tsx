@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 import { Map } from "lucide-react";
-import { JSX, useMemo, useState } from "react";
-import { Title } from "../../../components/ui/title";
-import { LoadMap } from "@/components/load-map";
+import { useMemo, useState } from "react";
+import { Title } from "../../../components/common/title";
+import { LoadMap } from "@/components/features/map/load-map";
 
 
 import {
@@ -18,9 +18,7 @@ import { MapExampleProps, MapStyle } from "@/types/map-types";
 
 
 
-
-
-export default function Page(): JSX.Element {
+export default function Page() {
 
     const [mapStyle, setMapStyle] = useState<MapStyle>("standard");
 
@@ -29,7 +27,7 @@ export default function Page(): JSX.Element {
         () =>
             dynamic<MapExampleProps>(
                 () =>
-                    import("@/components/map-example").then(
+                    import("@/components/features/map/map-example").then(
                         (mod) => mod.MapExample || mod
                     ),
                 {
@@ -41,14 +39,14 @@ export default function Page(): JSX.Element {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br p-4">
-            <div className="max-w-6xl mx-auto">
+        <div className="min-h-screen bg-gradient-to-br ">
+            <div className=" mx-auto">
                 <div className="text-center mb-6">
-                    <div className="flex justify-center items-center gap-2">
-                        <Title title="Mapa Personalizado" />
-                        <Map className="mt-1" />
+                    <div className="flex justify-center items-center lg:px-6 mt-6 lg:mt-0 gap-2">
+                        <Title subtitle="Ubicación: Jujuy, Argentina" icon={<Map className="mt-1" />} title="Mapa Personalizado" />
+
                     </div>
-                    <p className="text-gray-400">Ubicación: Jujuy, Argentina</p>
+
                 </div>
 
                 {/* Selector con shadcn */}
@@ -70,8 +68,9 @@ export default function Page(): JSX.Element {
                 </div>
 
                 {/* Contenedor del mapa */}
-                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 mx-auto w-full h-[600px]">
+                <div className="bg-white  rounded-2xl shadow-2xl overflow-hidden border border-gray-200 mx-auto w-full h-[600px]">
                     <MapLazy
+
                         textMarker="Yo estudio aqui!"
                         posix={[-24.189100881627, -65.29336743207986]}
                         zoom={16}

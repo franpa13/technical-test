@@ -5,7 +5,7 @@ interface FeedImageProps {
   alt: string;
 }
 
-export function FeedImage({ src, alt }: FeedImageProps) {
+export const FeedImage = ({ src, alt }: FeedImageProps) =>{
   return (
     <div className="relative w-full h-48">
       <Image

@@ -1,15 +1,15 @@
 import { Post } from "@/types/feed-types";
 import { FeedImage } from "./feed-image";
-import { formatSpanishDate } from '../utils/date-utils';
+import { formatSpanishDate } from '../../../utils/date-utils';
 import Image from "next/image";
 
 interface FeedItemProps {
     post: Post;
 }
 
-export function FeedItem({ post }: FeedItemProps) {
+export const FeedItem = ({ post }: FeedItemProps) => {
     return (
-        <article className="w-full lg:w-1/4 rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden
+        <article className="w-full  rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden
     transform transition-transform duration-300 hover:scale-101 hover:shadow-lg">
             <FeedImage src={post.image} alt={post.title} />
             <div className="p-2 space-y-2">

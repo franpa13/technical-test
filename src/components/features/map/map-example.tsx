@@ -27,10 +27,11 @@ export const MapExample = ({
                 height: "100%",
                 width: "100%",
                 borderRadius: "12px",
+                zIndex: ""
             }}
             zoomControl
             dragging
-            className="leaflet-container-custom"
+            className="leaflet-container-custom z-0"
         >
             <MapUpdater center={posix} zoom={zoom} />
 

@@ -11,19 +11,19 @@ import {
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { routes } from "@/const/routes";
-import { SingleLink } from './single-link';
-import { RocketLogo } from "./ui/rocket-logo";
+import { SingleLink } from '../common/single-link';
+import { RocketLogo } from "../common/rocket-logo";
 
 
-export function AppSidebar() {
+export const AppSidebar = () => {
 
 
     return (
-        <Sidebar className="border-login-card-border bg-login-card-bg backdrop-blur-sm">
-            <SidebarContent>
+        <Sidebar className="border-login-card-border bg-login-card-bg backdrop-blur-sm ">
+            <SidebarContent >
                 <SidebarGroup>
                     <SidebarGroupLabel className="flex items-center gap-3 px-2 my-8">
-                        <RocketLogo />
+                        <RocketLogo /> 
                         <div className="flex flex-col justify-end items-start leading-tight">
                             <span className="text-lg font-extrabold bg-gradient-to-r from-login-gradient-from to-login-gradient-to bg-clip-text text-transparent tracking-wide">
                                 Rocket

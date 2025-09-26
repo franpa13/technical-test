@@ -16,7 +16,7 @@ export const formatSpanishDate = (date: Date): string => {
 /**
  * Formatea una fecha con hora
  */
-export const formatSpanishDateTime = (date: Date): string  => {
+export const formatSpanishDateTime = (date: Date): string => {
     return date.toLocaleDateString("es-AR", {
         day: "2-digit",
         month: "short",
@@ -29,7 +29,7 @@ export const formatSpanishDateTime = (date: Date): string  => {
 /**
  * Formatea una fecha en formato largo
  */
-export const formatSpanishLongDate = (date: Date): string  =>{
+export const formatSpanishLongDate = (date: Date): string => {
     return date.toLocaleDateString("es-AR", {
         weekday: "long",
         day: "2-digit",
@@ -41,7 +41,7 @@ export const formatSpanishLongDate = (date: Date): string  =>{
 /**
  * Obtiene la diferencia de tiempo relativa (ej: "hace 2 horas")
  */
-export const getRelativeTime = (date: Date): string  =>{
+export const getRelativeTime = (date: Date): string => {
     const now = new Date();
     const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
 
@@ -56,7 +56,7 @@ export const getRelativeTime = (date: Date): string  =>{
 /**
  * Valida si una fecha es hoy
  */
-export const isToday  = (date: Date): boolean  => {
+export const isToday = (date: Date): boolean => {
     const today = new Date();
     return date.toDateString() === today.toDateString();
 }
@@ -64,7 +64,7 @@ export const isToday  = (date: Date): boolean  => {
 /**
  * Valida si una fecha es de esta semana
  */
-export const isThisWeek = (date: Date): boolean   =>{
+export const isThisWeek = (date: Date): boolean => {
     const today = new Date();
     const startOfWeek = new Date(today.setDate(today.getDate() - today.getDay()));
     return date >= startOfWeek;

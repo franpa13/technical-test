@@ -4,7 +4,7 @@ import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useEffect } from "react"
-export function ModeToggle() {
+export const ModeToggle = () => {
   const { setTheme, theme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
 
