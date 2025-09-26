@@ -7,8 +7,8 @@ export type Route = {
 }
 export const routes: Route[] = [
     {
-        title: "Feed",
-        url: "/feed",
+        title: "Home",
+        url: "/home",
         icon: Home,
     },
     {

@@ -2,10 +2,10 @@
 
 import { feedFake } from "@/data/fake-feed";
 import { FeedGrid } from "@/components/feed-grid";
-import { Title } from '../../components/title';
+import { Title } from '../../../components/ui/title';
 import { Rocket } from 'lucide-react';
 
-function Feed() {
+function HomePage() {
   return (
     <section className=" mx-auto flex  justify-center flex-col px-2 lg:px-20 space-y-6 ">
       <div className="flex justify-center items-center gap-3 mt-7 w-full">
@@ -16,4 +16,4 @@ function Feed() {
     </section>
   );
 }
-export default Feed
+export default HomePage

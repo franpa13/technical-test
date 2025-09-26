@@ -13,8 +13,8 @@ export const feedFake: Post[] = [
   },
   {
     id: uuidv4(),
-    title: "Conoci a Messi",
-    content: "Logre conocer a Messi en Miami. Despues de su partido en Milwuake",
+    title: "Conocí a Messi",
+    content: "Logré conocer a Messi en Miami después de su partido en Milwuakee.",
     author: "Francisco Paredes",
     authorImage: "https://randomuser.me/api/portraits/men/45.jpg",
     image: "https://images.mlssoccer.com/image/private/t_editorial_landscape_12_desktop/f_auto/mls/dc0dgjrsuu7uqfbsfzqj.jpg",
@@ -82,23 +82,5 @@ export const feedFake: Post[] = [
     authorImage: "https://randomuser.me/api/portraits/women/77.jpg",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop",
     date: new Date("2024-09-27"),
-  },
-  {
-    id: uuidv4(),
-    title: "Amanecer en la montaña",
-    content: "Un espectáculo de colores y tranquilidad para empezar el día.",
-    author: "Javier Molina",
-    authorImage: "https://randomuser.me/api/portraits/men/22.jpg",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=600&fit=crop",
-    date: new Date("2024-09-28"),
-  },
-  {
-    id: uuidv4(),
-    title: "Jardín secreto",
-    content: "Descubriendo un lugar escondido lleno de flores y aromas inolvidables.",
-    author: "Elena Castillo",
-    authorImage: "https://randomuser.me/api/portraits/women/12.jpg",
-    image: "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&h=600&fit=crop",
-    date: new Date("2024-09-29"),
   }
 ];

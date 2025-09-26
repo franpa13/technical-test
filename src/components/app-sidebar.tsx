@@ -40,7 +40,7 @@ export function AppSidebar() {
                             {routes.map((route) => {
 
                                 return (
-                                    <SidebarMenuItem key={route.title}>
+                                    <SidebarMenuItem key={route.url}>
                                         <SidebarMenuButton asChild>
                                             <SingleLink route={route} ></SingleLink>
                                         </SidebarMenuButton>

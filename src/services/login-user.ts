@@ -1,5 +1,5 @@
 import { User } from "@/types/auth-types";
-import { users } from "@/data/fake-user";
+import { users } from "@/data/fake-users";
 
 export const loginUser = (user: User): User | null => {
     const matchedUser = users.find(

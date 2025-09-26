@@ -10,7 +10,7 @@ import { User } from "@/types/auth-types";
 import SnackbarAlert from "@/components/snackbar-alert";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { ButtonLoader } from '../../../components/button-loader';
-import { Title } from "@/components/title";
+import { Title } from "@/components/ui/title";
 import { RocketLogo } from '../../../components/ui/rocket-logo';
 
 export default function LoginPage() {
@@ -46,7 +46,7 @@ export default function LoginPage() {
         const userLogged: User | null = loginUser(form);
         if (userLogged) {
 
-            router.push("/feed");
+            router.push("/home");
         } else {
             setErrorLogin(true);
             setIsLoading(false);
