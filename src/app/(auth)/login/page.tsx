@@ -67,7 +67,7 @@ export default function LoginPage() {
                     <RocketLogo />
 
                     <CardTitle>
-                        <Title title="Bienvenido de vuelta"></Title>
+                        <Title title="Iniciar Sesión"></Title>
                     </CardTitle>
                     <CardDescription className=" text-base text-login-text-muted">
                         Ingresa a tu cuenta para continuar
