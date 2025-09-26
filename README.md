@@ -44,7 +44,8 @@ La app se ejecutara en : http://localhost:3000
 📦 Build de producción
 npm run build
 npm start
-
+correo : user1@gmail.com
+contraseña : userdemo1
 
 
 
