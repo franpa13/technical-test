@@ -12,7 +12,7 @@ import { ProfileActivityCard } from "@/components/features/profile/profile-activ
 
 export default function ProfilePage() {
   return (
-    <div className="container mx-auto animate-fade-in-down mt-3">
+    <div className="container mx-auto  mt-3">
       <div className="rounded-lg overflow-hidden bg-background shadow-sm">
         <ProfileCover cover={mockUser.cover} />
         <ProfileHeader

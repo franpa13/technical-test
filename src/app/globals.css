@@ -1,9 +1,8 @@
 
 @import "tailwindcss";
 @import "tw-animate-css";
-@import 'tailwindcss';
 
-@plugin "@midudev/tailwind-animations";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -153,5 +152,12 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
